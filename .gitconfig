@@ -1,0 +1,7 @@
+[user]
+	email = vedjain773@gmail.com
+	name = Ved Jain
+[credential]
+    helper = store
+[core]
+    symlinks = false
