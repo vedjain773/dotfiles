@@ -1,1 +1,10 @@
-/home/ved/.config/wofi/config
+# Wofi Configuration
+show=drun
+width=400
+height=350
+location=center
+always_parse_args=true
+show_all=false
+print_command=true
+insensitive=true
+prompt=Search apps...

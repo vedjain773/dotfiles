@@ -1,1 +1,20 @@
-/home/ved/.config/alacritty/alacritty.toml
+[window]
+padding = { x = 12, y = 12 }
+dynamic_title = true
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+size = 12.0
+
+[colors]
+primary = { background = "#F5F6F7", foreground = "#1E222A" }
+
+cursor = { text = "#FFFFFF", cursor = "#FF5F00" }
+
+normal = { black = "#1E222A", red = "#D32F2F", green = "#388E3C", yellow = "#F57C00", blue = "#007ACC", magenta = "#7B1FA2", cyan = "#0097A7", white = "#E0E0E0" }
+
+bright = { black = "#6B7280", red = "#FF5F00", green = "#4CAF50", yellow = "#FFB300", blue = "#42A5F5", magenta = "#BA68C8", cyan = "#4DD0E1", white = "#FFFFFF" }
+
+selection = { text = "#1E222A", background = "#E5E7EB" }

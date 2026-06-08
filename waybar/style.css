@@ -1,1 +1,58 @@
-/home/ved/.config/waybar/style.css
+@define-color bg-snow #FFFFFF;
+@define-color bg-paper #F5F6F7;
+@define-color orange #FF5F00;
+@define-color ink #1E222A;
+@define-color slate #6B7280;
+
+* {
+  font-family: "JetBrains Mono Nerd Font", monospace;
+  font-size: 13px;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+}
+
+window#waybar {
+  background: @bg-snow;   
+  border: 1px solid @ink; 
+  color: @ink;
+}
+
+#workspaces {
+  padding: 0 4px;
+}
+
+#workspaces button {
+  padding: 0 6px;
+  background: transparent;
+  color: @orange;
+  font-size: 14px;
+  min-width: 0;
+  transition: all 0.15s ease;
+}
+
+#workspaces button.active {
+  color: @orange;
+}
+
+#workspaces button.occupied {
+  color: @ink;
+}
+
+#workspaces button:hover {
+  color: @slate;
+  background: transparent;
+}
+
+#clock {
+  letter-spacing: 0.08em;
+  color: @ink; 
+  font-weight: 400;
+}
+
+#battery,
+#network {
+  border-left: 1px solid @ink;
+  padding: 0 10px;
+  color: @ink;
+}

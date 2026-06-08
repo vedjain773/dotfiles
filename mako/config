@@ -1,1 +1,40 @@
-/home/ved/.config/mako/config
+# Global Settings
+font=JetBrainsMono Nerd Font 10
+background-color=#FFFFFF
+text-color=#1E222A
+border-size=1
+border-color=#6B7280
+border-radius=0
+padding=12
+margin=10
+width=300
+height=110
+anchor=top-right
+max-visible=5
+layer=top
+
+# Animation/Progress
+progress-color=source #FF5F00
+
+# Low Urgency Notifications (e.g., media changes)
+[urgency=low]
+background-color=#F5F6F7
+text-color=#6B7280
+border-color=#E5E7EB
+default-timeout=4000
+
+# Normal Urgency Notifications (e.g., chat messages, system alerts)
+[urgency=normal]
+background-color=#FFFFFF
+text-color=#1E222A
+border-color=#FF5F00
+border-size=2
+default-timeout=8000
+
+# High Urgency Notifications (e.g., low battery, critical errors)
+[urgency=high]
+background-color=#FFFFFF
+text-color=#1E222A
+border-color=#D32F2F
+border-size=2
+default-timeout=0

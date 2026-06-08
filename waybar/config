@@ -1,1 +1,43 @@
-/home/ved/.config/waybar/config
+{
+    "height": 30,
+    "margin-top": 5,
+    "margin-left": 5,
+    "margin-right": 5,
+    "modules-left": [
+		"sway/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "battery", "network"
+    ],
+    "clock": {
+		"format": "{:%A, %I:%M %p}",
+        "interval": 60,
+        "tooltip-format": "{:%A, %B %d %Y}"    
+    },
+    "battery": {
+        "interval": 30,
+        "format": "{capacity}%",
+        "format-charging": "{capacity}% ",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        }
+    },
+	"network": {
+        "format-wifi": "NET:{signalStrength}%",
+        "format-wifi": "{essid}",
+        "format-disconnected": "Disconnected"
+    },
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "focused": "",
+            "default": ""        
+        }
+    }
+}
