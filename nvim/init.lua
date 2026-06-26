@@ -1,40 +1,33 @@
+require("config.lazy")
+
+require("nvim-tree").setup()
+
+require('nvim-treesitter').setup {
+  install_dir = vim.fn.stdpath('data') .. '/site'
+}
+
+require('nvim-treesitter').install { 'rust', 'javascript', 'zig', 'c' }
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { '<filetype>' },
+  callback = function() vim.treesitter.start() end,
+})
+
 vim.opt.number = true
 vim.opt.relativenumber = true 
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.pack.add({
-  { src = 'https://github.com/nvim-tree/nvim-web-devicons' }, -- optional
-  { src = 'https://github.com/nvim-tree/nvim-tree.lua' },
-})
-
-
-vim.opt.tabstop = 4      -- Visual width of a tab
-vim.opt.softtabstop = 4  -- Number of spaces a tab counts for while editing
-vim.opt.shiftwidth = 4   -- Size of an indent
-vim.opt.expandtab = true -- Turn tabs into spaces
+vim.opt.tabstop = 4      
+vim.opt.softtabstop = 4 
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
 vim.opt.termguicolors = true
-
-require("nvim-tree").setup()
-
-  ---@type nvim_tree.config
-  local config = {
-    sort = {
-      sorter = "case_sensitive",
-    },
-    view = {
-      width = 30,
-    },
-    renderer = {
-      group_empty = true,
-    },
-    filters = {
-      dotfiles = true,
-    },
-  }
-  require("nvim-tree").setup(config)
 
 vim.opt.showmode = false 
 
